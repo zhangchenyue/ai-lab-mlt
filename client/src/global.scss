@@ -1,0 +1,56 @@
+$--color-primary: #333;
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+@import "~element-ui/packages/theme-chalk/src/index";
+@import '~element-ui/lib/theme-chalk/display.css';
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Roboto", "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling : touch;
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar:horizontal {
+    height: 6px;
+    background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 6px;
+    background: rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: linear-gradient(left, #fff, #e4e4e4);
+    border: 1px solid #aaa;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #fff;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(left, #22ADD4, #1E98BA);
+}
+
+@media (max-width: 768px) {
+    body {
+        .el-table {
+            font-size: 12px !important;
+        }
+    }
+}

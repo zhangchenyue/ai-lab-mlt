@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0",
+  "name": "ai-lab-mlt",
+  "private": true,
+  "scripts": {
+    "rm": "node client/node_modules/rimraf/bin",
+    "clean": "npm run rm pkg client/test/e2e/reports client/test/unit/coverage client/selenium-debug.log server/public",
+    "postinstall": "npm run server:install && npm run client:install",
+    "client:install": "cd client && npm install",
+    "server:install": "cd server && npm install",
+    "start": "node server/startup",
+    "build": "cd client && npm run build",
+    "debug": "cd client && npm run dev",
+    "mock": "cd client && npm run mock",
+    "test": "cd client && npm test",
+    "pkg": "npm run rm pkg && npm run build && node client/node_modules/ncp/bin/ncp server pkg"
+  },
+  "devDependencies": {}
+}
